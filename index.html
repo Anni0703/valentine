@@ -1,0 +1,115 @@
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine?</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: pink;
+            flex-direction: column;
+            text-align: center;
+            overflow: hidden;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+        h1 {
+            color: red;
+            font-size: 28px;
+        }
+        .buttons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-evenly;
+            width: 400px;
+            position: relative;
+        }
+        button {
+            padding: 12px 25px;
+            font-size: 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: 0.3s;
+            font-weight: bold;
+        }
+        #yes {
+            background-color: red;
+            color: white;
+        }
+        #no {
+            background-color: gray;
+            color: white;
+            position: relative;
+        }
+        .response {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+        }
+        .response img {
+            width: 250px;
+            margin-top: 20px;
+        }
+        .love-letter {
+            margin-top: 20px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            font-size: 18px;
+            color: darkred;
+            max-width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>My Kuchu-puchu😘</h1>
+        <p>jldi se btao ki....</p>
+        <h1>Will you be my Valentine? ❤️</h1>
+        <div class="buttons">
+            <button id="yes">Yes</button>
+            <button id="no">No</button>
+        </div>
+    </div>
+    <div class="response" id="response">
+        <h1>Yay! I love you! ❤️</h1>
+        <img src="C:\Users\hp\Downloads\image.jpeg">
+        <div class="love-letter">
+            <p>My dearest love,</p>
+            <p>You the cutest gulluu mullu kuchu puchu cutie patotie ever.With you I feel the happiest.You make me feel special. Happy Valentine's Day! 💖</p>
+            <p>Forever yours,</p>
+            <p>Your Love</p>
+        </div>
+    </div>
+    
+    <script>
+        const noButton = document.getElementById("no");
+        const yesButton = document.getElementById("yes");
+        const responseDiv = document.getElementById("response");
+        const containerDiv = document.querySelector(".container");
+        
+        noButton.addEventListener("mouseover", function() {
+            const x = Math.random() * (window.innerWidth - 100);
+            const y = Math.random() * (window.innerHeight - 50);
+            noButton.style.left = `${x}px`;
+            noButton.style.top = `${y}px`;
+        });
+
+        yesButton.addEventListener("click", function() {
+            containerDiv.style.display = "none";
+            responseDiv.style.display = "flex";
+        });
+    </script>
+</body>
+
